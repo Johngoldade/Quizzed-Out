@@ -13,7 +13,10 @@
     "client:dev": "cd client && npm run dev",
     "build": "cd server && npm run build",
     "seed": "cd server && npm run seed",
-    "test": "npx cypress run --browser electron --headless",
+    "test": "npm run test:component && npm run test:e2e",
+    "test:component": "npx cypress run --browser electron --headless --component",
+    "test:e2e": "npx cypress run --browser electron --headless",
+    "test-gui": "npx cypress open",
     "render-build": "npm install && npm run build"
   },
   "keywords": [],
